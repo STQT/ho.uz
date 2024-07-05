@@ -1,0 +1,16 @@
+services:
+  docs:
+    image: ho_uz_local_docs
+    container_name: ho_uz_local_docs
+    build:
+      context: .
+      dockerfile: ./compose/local/docs/Dockerfile
+    env_file:
+      - ./.envs/.local/.django
+    volumes:
+      - ./docs:/docs:z
+      - ./config:/app/config:z
+      - ./ho_uz:/app/ho_uz:z
+    ports:
+      - '9000:9000'
+    command: /start-docs
