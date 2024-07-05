@@ -329,3 +329,4 @@ dump.rdb
 ho_uz/media/
 
 .pytest_cache/
+.env
