@@ -24,7 +24,7 @@ class Place(models.Model):
     size = models.FloatField(null=True, blank=True)
     location = models.CharField(max_length=255)
     photo = models.ImageField(upload_to="places/")
-    services = models.ManyToManyField("Services")
+    services = models.ManyToManyField("Services", blank=True)
 
     def __str__(self):
         return self.name
