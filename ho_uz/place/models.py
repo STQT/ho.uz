@@ -5,6 +5,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    hide = models.BooleanField(default=False, verbose_name="Скрыть?")
 
     def __str__(self):
         return self.name
@@ -25,6 +26,7 @@ class Place(models.Model):
     location = models.CharField(max_length=255)
     photo = models.ImageField(upload_to="places/")
     services = models.ManyToManyField("Services", blank=True)
+    hide = models.BooleanField(default=False, verbose_name="Скрыть?")
 
     def __str__(self):
         return self.name

@@ -9,5 +9,5 @@ router = DefaultRouter() if settings.DEBUG else SimpleRouter()
 app_name = "api"
 urlpatterns = router.urls
 urlpatterns += [
-    path('places/', include('ho_uz.place.urls'), name="places"),
+    path('places/', include('ho_uz.place.urls')),
 ]
