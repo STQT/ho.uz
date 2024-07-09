@@ -180,3 +180,5 @@ SPECTACULAR_SETTINGS["SERVERS"] = [
 ]
 # Your stuff...
 # ------------------------------------------------------------------------------
+MEDIA_ROOT = "/var/www/api.ho.uz/media"
+STATIC_ROOT = "/var/www/api.ho.uz/static"
