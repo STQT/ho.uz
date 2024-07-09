@@ -21,9 +21,9 @@ class Services(models.Model):
 class Place(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="places")
     name = models.CharField(max_length=255)
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=500, blank=True, null=True)
     size = models.FloatField(null=True, blank=True)
-    location = models.CharField(max_length=255)
+    location = models.CharField(max_length=255, blank=True, null=True)
     photo = models.ImageField(upload_to="places/")
     services = models.ManyToManyField("Services", blank=True)
     hide = models.BooleanField(default=False, verbose_name="Скрыть?")
